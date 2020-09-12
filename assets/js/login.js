@@ -26,7 +26,7 @@ $('#enroll').on('submit',function(e){
    e.preventDefault()
    $.ajax({
        type:'post',
-       url:'http://ajax.frontend.itheima.net/api/reguser',
+       url:'/api/reguser',
        data:{
            username:$('.ipt_username').val(),
            password:$('.cryptogram').val()
@@ -44,7 +44,7 @@ $('#enroll').on('submit',function(e){
 $('#enter').on('submit',function(e){
     e.preventDefault()
     $.ajax({
-      url: 'http://ajax.frontend.itheima.net/api/login',
+      url: '/api/login',
       method: 'POST',
       // 快速获取表单中的数据
       data: $(this).serialize(),
